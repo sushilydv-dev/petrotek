@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petrotek | Leading Industrial Lubricants, Oils, Grease Suppliers in UAE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white: #ffffff;
+    --black: #000000;
+    --red: #d90000;
+    --red-hover: #fd2c2c;
+    --blue: #00448f;
+    --blue-hover: #1a71ce;
+    --default-grey: #f0f2f5;
+    --light-grey: #fafafb;
+    --middle-dark: #3b3b3b;
+    --ink: #000000;
+    --ink-2: #111111;
+    --ink-3: #1c1c1c;
+    --brand: #d90000;
+    --accent: #d90000;
+    --accent-2: #fd2c2c;
+    --paper: #fafafb;
+    --surface: #ffffff;
+    --text: #3b3b3b;
+    --text-muted: #6A6A6A;
+    --line: #e0e4ec;
+    --line-dark: rgba(255,255,255,0.14);
+    --display: 'Roboto', Arial, sans-serif;
+    --body-font: 'Roboto', Arial, sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family: var(--body-font);
+    color: var(--text);
+    background: var(--paper);
+    line-height: 1.6;
+    font-size:15.5px;
+  }
+  a{text-decoration:none; color:inherit;}
+  img{max-width:100%; display:block;}
+  ul{list-style:none;}
+  h1,h2,h3,h4{font-family: var(--display); line-height:1.05;}
+
+  /* ---------- utility ---------- */
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family: var(--display); font-weight:600; font-size:13px;
+    letter-spacing:2.5px; text-transform:uppercase; color:var(--accent);
+  }
+  .eyebrow::before{content:''; width:26px; height:2px; background:var(--accent); display:block;}
+  .eyebrow.on-dark{color:var(--accent-2);}
+
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--display); font-weight:700; font-size:16px; letter-spacing:.5px;
+    padding: 13px 28px; border-radius: 4px; cursor:pointer; border:2px solid transparent;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
+  }
+  .btn-primary{background: var(--accent); color:#fff;}
+  .btn-primary:hover{transform: translateY(-3px); box-shadow: 0 14px 28px rgba(217,0,0,0.35);}
+  .btn-ghost{border-color: rgba(255,255,255,0.55); color:#fff;}
+  .btn-ghost:hover{background: rgba(255,255,255,0.12); transform: translateY(-3px);}
+  .btn-dark{background:var(--ink); color:#fff;}
+  .btn-dark:hover{transform: translateY(-3px); box-shadow: 0 14px 28px rgba(8,12,26,0.3);}
+
+  /* ---------- reveal / motion ---------- */
+  .reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.is-visible{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
+
+  section{padding: 100px 32px;}
+  .section-inner{max-width:1360px; margin:0 auto;}
+  .section-head{max-width:640px; margin-bottom:56px;}
+  .section-head h2{
+    font-size: clamp(32px, 4.2vw, 52px); font-weight:800; letter-spacing:.3px;
+    text-transform:uppercase; margin-top:14px; color:var(--text);
+  }
+  .section-head p{color:var(--text-muted); margin-top:14px; font-size:16px; max-width:520px;}
+  .section-head.on-dark h2{color:#fff;}
+  .section-head.on-dark p{color:rgba(255,255,255,0.68);}
+  .section-head.center{margin-left:auto; margin-right:auto; text-align:center;}
+  .section-head.center .eyebrow::before{display:none;}
+
+  /* ================= HEADER ================= */
+  header{position: sticky; top:0; z-index: 200; background: var(--surface); box-shadow: 0 4px 20px rgba(0,0,0,0.06);}
+  .topbar{
+    background: var(--ink); color: rgba(255,255,255,0.85); font-size: 12.5px;
+    padding: 7px 32px; display:flex; justify-content: space-between; align-items:center; flex-wrap: wrap; gap:8px;
+    letter-spacing:.2px;
+  }
+  .topbar .contact-info{display:flex; gap:22px; flex-wrap:wrap;}
+  .topbar .contact-info span{display:inline-flex; align-items:center; gap:6px;}
+  
+  .header-logo-row {
+    background: #ffffff;
+    padding: 12px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .header-logo-row .logo img {
+    max-height: 44px;
+    width: auto;
+    display: block;
+  }
+  .header-logo-row .header-contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .header-logo-row .header-phone {
+    font-family: var(--display);
+    font-weight: 700;
+    color: var(--text);
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .header-logo-row .header-phone:hover {
+    color: var(--accent);
+  }
+
+  .header-menu-row {
+    background: var(--red);
+    border-bottom: 3px solid #b30000;
+    width: 100%;
+  }
+  .header-menu-row .navwrap {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    height: 52px;
+    border-bottom: none;
+    transition: padding .25s ease;
+  }
+  
+  nav ul{display:flex; gap:8px; align-items:center;}
+  nav ul li{position:relative;}
+  nav ul li > a{
+    font-family:var(--display); font-weight:700; font-size:14.5px; letter-spacing:.5px;
+    color: #ffffff !important; padding: 15px 18px; display:block; position:relative;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+  }
+  nav ul li > a:hover {
+    background-color: rgba(255,255,255,0.08);
+  }
+  nav ul li > a::after{
+    content:''; position:absolute; left:18px; right:18px; bottom:5px; height:2px;
+    background:#ffffff; transform:scaleX(0); transform-origin:left; transition:transform .2s ease;
+  }
+  nav ul li > a:hover::after{transform:scaleX(1);}
+  nav ul li .submenu{
+    display:none; position:absolute; top:100%; left:0;
+    background:var(--surface); box-shadow: 0 16px 32px rgba(8,12,26,0.14);
+    border-radius: 8px; padding: 10px 0; min-width:190px; border:1px solid var(--line);
+    z-index: 10;
+  }
+  nav ul li:hover .submenu{display:block;}
+  nav ul li .submenu a{padding:9px 18px; font-size:13.5px; font-family:var(--body-font); font-weight:500; color: var(--text) !important;}
+  nav ul li .submenu a:hover{background:var(--paper); color:var(--accent) !important;}
+  
+  .nav-toggle{
+    display:none; flex-direction:column; justify-content:center; gap:5px;
+    width:32px; height:32px; background:none; border:none; cursor:pointer; padding:0;
+  }
+  .nav-toggle span{display:block; height:2px; width:100%; background:#ffffff; border-radius:2px; transition: transform .25s ease, opacity .25s ease;}
+  .nav-toggle.open span:nth-child(1){transform: translateY(7px) rotate(45deg);}
+  .nav-toggle.open span:nth-child(2){opacity:0;}
+  .nav-toggle.open span:nth-child(3){transform: translateY(-7px) rotate(-45deg);}
+
+  /* ================= HERO ================= */
+  .hero{
+    position:relative; min-height: 94vh; display:flex; align-items:center;
+    color: #fff; overflow:hidden; background:var(--ink);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+  }
+  .hero-bg{position:absolute; inset:0; z-index:0;}
+  .hero-bg img{width:100%; height:100%; object-fit:cover; opacity:.55;}
+  .hero-bg::after{
+    content:''; position:absolute; inset:0;
+    background: linear-gradient(100deg, var(--ink) 18%, rgba(8,12,26,0.78) 46%, rgba(8,12,26,0.35) 78%);
+  }
+  .hero-inner{position:relative; z-index:2; max-width:1440px; margin:0 auto; padding: 60px 32px; width:100%;}
+  .hero-inner .eyebrow{color:var(--accent-2); margin-bottom:22px;}
+  .hero-inner .eyebrow::before{background:var(--accent-2);}
+  .hero-inner h1{
+    font-size: clamp(44px, 7.5vw, 96px); font-weight:800; text-transform:uppercase;
+    max-width: 880px; letter-spacing:.5px; margin-bottom: 24px;
+  }
+  .hero-inner h1 em{font-style:normal; color:var(--accent-2);}
+  .hero-inner p{font-size:18px; max-width:480px; color:rgba(255,255,255,0.82); margin-bottom: 36px;}
+  .hero-btn-row{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:52px;}
+  .hero-tags{display:flex; gap:12px; flex-wrap:wrap;}
+  .hero-tags span{
+    display:inline-flex; align-items:center; gap:8px;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.22);
+    padding: 7px 16px 7px 12px; border-radius: 100px; font-size:12.5px; font-weight:600;
+    letter-spacing: 1px; text-transform:uppercase; transition: background .2s ease, transform .2s ease;
+  }
+  .hero-tags span::before{content:''; width:6px; height:6px; border-radius:50%; background:var(--accent-2);}
+  .hero-tags span:hover{background: rgba(255,255,255,0.16); transform: translateY(-2px);}
+
+  .scroll-cue{
+    position:absolute; left:32px; bottom:44px; z-index:2;
+    display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.7);
+    font-family:var(--display); font-size:12px; letter-spacing:3px; text-transform:uppercase;
+  }
+  .scroll-cue .line{width:2px; height:34px; background:rgba(255,255,255,0.3); position:relative; overflow:hidden;}
+  .scroll-cue .line::after{
+    content:''; position:absolute; top:-100%; left:0; width:100%; height:100%; background:var(--accent-2);
+    animation: scrollCue 1.8s ease infinite;
+  }
+  @keyframes scrollCue{ to{ top:100%; } }
+
+  @keyframes heroFadeUp{ from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);} }
+  .hero-inner .eyebrow{animation: heroFadeUp .7s ease both;}
+  .hero-inner h1{animation: heroFadeUp .7s ease .1s both;}
+  .hero-inner p{animation: heroFadeUp .7s ease .2s both;}
+  .hero-inner .hero-btn-row{animation: heroFadeUp .7s ease .3s both;}
+  .hero-inner .hero-tags{animation: heroFadeUp .7s ease .4s both;}
+  @media (prefers-reduced-motion: reduce){
+    .hero-inner *{animation:none !important;}
+    .scroll-cue .line::after{animation:none;}
+  }
+
+  /* ================= MARQUEE ================= */
+  .marquee-section{background:var(--surface); padding: 34px 0; border-bottom:1px solid var(--line);}
+  .marquee-head{max-width:1360px; margin:0 auto 18px; padding:0 32px;}
+  .marquee-head span{font-family:var(--display); font-weight:600; font-size:12px; letter-spacing:2.5px; color:var(--text-muted); text-transform:uppercase;}
+  .marquee-wrap{overflow:hidden; -webkit-mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent); mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);}
+  .marquee-track{display:flex; align-items:center; gap:64px; width:max-content; animation: marqueeScroll 30s linear infinite;}
+  .marquee-wrap:hover .marquee-track{animation-play-state:paused;}
+  .marquee-track img{height:32px; width:auto; filter:grayscale(1); opacity:.5; transition:filter .2s ease, opacity .2s ease;}
+  .marquee-track img:hover{filter:grayscale(0); opacity:1;}
+  @keyframes marqueeScroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+  @media (prefers-reduced-motion: reduce){ .marquee-track{animation:none;} }
+
+  /* ================= ABOUT ================= */
+  .about-split{display:grid; grid-template-columns: 1fr 1fr; gap:80px; align-items:start;}
+  .about-copy p{color:var(--text-muted); font-size:16.5px; margin-top:18px; max-width:460px;}
+  .about-copy .btn{margin-top:32px;}
+  .pillars{display:flex; flex-direction:column;}
+  .pillar{display:flex; gap:22px; padding:26px 0; border-top:1px solid var(--line);}
+  .pillar:last-child{border-bottom:1px solid var(--line);}
+  .pillar .num{font-family:var(--display); font-weight:700; font-size:22px; color:var(--accent); min-width:38px;}
+  .pillar h3{font-size:14px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; color:var(--text);}
+  .pillar p{color:var(--text-muted); font-size:14.5px;}
+
+  /* ================= STATS BAND ================= */
+  .stats-band{background: var(--ink); padding: 76px 32px;}
+  .stats-row{
+    max-width:1200px; margin:0 auto; display:flex; justify-content:center; align-items:center;
+    flex-wrap:wrap;
+  }
+  .stat-item{flex:1; min-width:180px; text-align:center; padding: 12px 24px; position:relative;}
+  .stat-item + .stat-item::before{
+    content:''; position:absolute; left:0; top:10%; bottom:10%; width:1px; background:var(--line-dark);
+  }
+  .stat-item strong{
+    display:block; font-family:var(--display); font-size: clamp(48px,6vw,72px); font-weight:800;
+    color:#fff; line-height:1;
+  }
+  .stat-item span{
+    display:block; margin-top:12px; color:rgba(255,255,255,0.6); font-size:12.5px;
+    letter-spacing:2px; text-transform:uppercase; font-weight:600;
+  }
+
+  /* ================= BRANDS ================= */
+  .brand-grid{display:grid; grid-template-columns: repeat(5, 1fr); gap: 16px;}
+  .brand-tile{
+    background:var(--surface); border:1px solid var(--line); border-radius: 10px;
+    padding: 26px; display:flex; align-items:center; justify-content:center; height: 108px;
+    font-family: var(--display); font-size: 19px; font-weight: 800; color: var(--text);
+    letter-spacing: 1px; text-transform: uppercase;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, color .2s ease;
+  }
+  .brand-tile:hover{transform: translateY(-5px); box-shadow: 0 16px 30px rgba(8,12,26,0.1); border-color:transparent; color: var(--accent);}
+
+  /* ================= NETWORK ================= */
+  .network-band{background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .network-row{
+    max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:center;
+  }
+  .network-item{flex:1; min-width:200px; text-align:center; padding:8px 24px; position:relative;}
+  .network-item + .network-item::before{content:''; position:absolute; left:0; top:14%; bottom:14%; width:1px; background:var(--line);}
+  .network-item strong{display:block; font-family:var(--display); font-weight:800; font-size:44px; color:var(--accent);}
+  .network-item span{display:block; margin-top:8px; font-size:12px; letter-spacing:1.5px; color:var(--text-muted); text-transform:uppercase; font-weight:600;}
+
+  /* ================= NEWS ================= */
+  .news-layout{display:grid; grid-template-columns: 1.15fr 1fr; gap:28px;}
+  .news-featured, .news-side-card{
+    position:relative; border-radius: 12px; overflow:hidden; background:var(--surface);
+    border:1px solid var(--line); transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .news-featured:hover, .news-side-card:hover{transform: translateY(-6px); box-shadow: 0 20px 40px rgba(8,12,26,0.12);}
+  .news-featured img{height:100%; min-height:420px; width:100%; object-fit:cover; transition:transform .4s ease;}
+  .news-side-card img{height:190px; width:100%; object-fit:cover; transition:transform .4s ease;}
+  .news-featured:hover img, .news-side-card:hover img{transform:scale(1.05);}
+  .news-featured{display:flex; flex-direction:column;}
+  .news-img-wrap{position:relative; overflow:hidden;}
+  .news-date-badge{
+    position:absolute; top:16px; left:16px; background:var(--ink); color:#fff;
+    font-family:var(--display); font-weight:700; font-size:11.5px; letter-spacing:1px;
+    padding:6px 12px; border-radius:100px; text-transform:uppercase;
+  }
+  .news-body{padding: 24px 26px 28px;}
+  .news-featured .news-body h4{font-size:26px; margin-bottom:10px; text-transform:none; letter-spacing:0;}
+  .news-side-card .news-body h4{font-size:18px; margin-bottom:8px; font-family:var(--display); font-weight:700; letter-spacing:0; text-transform:none;}
+  .news-body p{color:var(--text-muted); font-size:14px; margin-bottom:14px;}
+  .news-link{color:var(--accent); font-weight:700; font-size:13px; font-family:var(--display); letter-spacing:.5px;}
+  .news-side{display:flex; flex-direction:column; gap:24px;}
+
+  /* ================= CONTACT ================= */
+  .contact{background: var(--ink); color:#fff;}
+  .contact-split{display:grid; grid-template-columns: 0.9fr 1.1fr; gap:64px; align-items:start;}
+  .contact-info-list{margin-top:32px; display:flex; flex-direction:column; gap:20px;}
+  .contact-info-list li{display:flex; gap:16px; align-items:flex-start; font-size:15px; color:rgba(255,255,255,0.82);}
+  .contact-info-list .ico{
+    width:38px; height:38px; border-radius:8px; background:rgba(255,255,255,0.08);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:16px;
+  }
+  .contact-wrap{
+    background: var(--surface); color: var(--text); border-radius: 16px; padding: 8px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.35);
+  }
+
+  /* Re-skin the embedded Zoho Support Web-to-Case form */
+  #zohoSupportWebToCase, #zohoSupportWebToCase * {
+    font-family: var(--body-font) !important;
+    box-sizing: border-box;
+  }
+  #zohoSupportWebToCase {
+    width: 100% !important;
+    padding: 30px !important;
+    background: #fff;
+    border-radius: 12px;
+  }
+  #zohoSupportWebToCase .zsFormClass {
+    width: 100% !important;
+    background: transparent !important;
+    border-collapse: collapse;
+  }
+  #zohoSupportWebToCase td {
+    padding: 12px 0 !important;
+    vertical-align: middle;
+    color: var(--text);
+  }
+  #zohoSupportWebToCase td.zsFontClass {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--ink-2);
+  }
+  #zohoSupportWebToCase td.zsFontClass strong {
+    font-family: var(--display) !important;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 20px;
+  }
+  #zohoSupportWebToCase textarea, 
+  #zohoSupportWebToCase input[type='text'],
+  #zohoSupportWebToCase select {
+    width: 100% !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 8px !important;
+    padding: 11px 14px !important;
+    font-size: 14.5px !important;
+    color: var(--text) !important;
+    background-color: #fff !important;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  #zohoSupportWebToCase input[type='text']:focus, 
+  #zohoSupportWebToCase textarea:focus,
+  #zohoSupportWebToCase select:focus {
+    outline: none !important;
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 0 3px rgba(0,68,143,0.15) !important;
+  }
+  #zohoSupportWebToCase textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  #zohoSupportWebToCase input[type='submit'],
+  #zohoSupportWebToCase input[type='button'] {
+    font-family: var(--display) !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    letter-spacing: .5px;
+    padding: 12px 28px !important;
+    border-radius: 6px !important;
+    cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
+    border: 2px solid transparent;
+  }
+  #zohoSupportWebToCase input[type='submit'] {
+    background: var(--accent) !important;
+    color: #fff !important;
+  }
+  #zohoSupportWebToCase input[type='submit']:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(217,0,0,0.35);
+  }
+  #zohoSupportWebToCase input[type='submit']:disabled {
+    background: var(--line) !important;
+    color: var(--text-muted) !important;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  #zohoSupportWebToCase input[type='button'] {
+    background: transparent !important;
+    border-color: var(--line) !important;
+    color: var(--text-muted) !important;
+  }
+  #zohoSupportWebToCase input[type='button']:hover {
+    background: var(--paper) !important;
+    color: var(--text) !important;
+  }
+  #zohoSupportWebToCase .manfieldbdr {
+    border-left: 3px solid #ff6448 !important;
+  }
+  #zohoSupportWebToCase .wb_FtCon {
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--text-muted);
+    justify-content: center;
+  }
+  #zohoSupportWebToCase .wb_logoCon {
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+  }
+  #zohoSupportWebToCase .wb_logoCon:hover {
+    opacity: 1;
+  }
+  @media (max-width: 600px) {
+    #zohoSupportWebToCase td {
+      display: block;
+      width: 100% !important;
+      text-align: left;
+      padding: 6px 0 !important;
+    }
+  }
+
+  /* ================= FOOTER ================= */
+  footer{background: #05070F; color: rgba(255,255,255,0.75); padding: 64px 32px 24px;}
+  .footer-grid{
+    max-width:1440px; margin:0 auto; display:grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 1.2fr;
+    gap: 32px; padding-bottom: 36px; border-bottom: 1px solid var(--line-dark);
+  }
+  .footer-grid h4{font-family:var(--display); color:#fff; font-size:13px; margin-bottom:18px; letter-spacing:1.5px; text-transform:uppercase;}
+  .footer-grid li{margin-bottom:11px; font-size:13.5px;}
+  .footer-grid li a:hover{color:#fff;}
+  .footer-logo{font-family:var(--display); font-weight:800; font-size:22px; color:#fff; margin-bottom:14px;}
+  .footer-bottom{
+    max-width:1440px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;
+    padding-top:22px; font-size:12px; flex-wrap:wrap; gap:12px;
+  }
+
+  /* ================= BACK TO TOP ================= */
+  .back-to-top{
+    position:fixed; right:24px; bottom:24px; z-index:300;
+    width:46px; height:46px; border-radius:50%;
+    background:var(--accent); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-size:18px; font-weight:700; border:none; cursor:pointer;
+    box-shadow: 0 10px 24px rgba(217,0,0,0.4);
+    opacity:0; transform:translateY(12px); pointer-events:none;
+    transition: opacity .25s ease, transform .25s ease, background .2s ease;
+  }
+  .back-to-top.visible{opacity:1; transform:translateY(0); pointer-events:auto;}
+  .back-to-top:hover{background:var(--accent-2);}
+
+  /* ================= RESPONSIVE ================= */
+  @media (max-width: 1050px){
+    .about-split{grid-template-columns:1fr; gap:44px;}
+    .news-layout{grid-template-columns:1fr;}
+    .news-featured img{min-height:260px;}
+    .contact-split{grid-template-columns:1fr; gap:40px;}
+    .brand-grid{grid-template-columns: repeat(3, 1fr);}
+    .footer-grid{grid-template-columns: 1fr 1fr;}
+    section{padding:72px 24px;}
+  }
+  @media (max-width: 720px){
+    .stat-item + .stat-item::before, .network-item + .network-item::before{display:none;}
+    .stat-item, .network-item{flex:1 1 45%;}
+  }
+  @media (max-width: 1000px){
+    nav ul{display:none;}
+    .nav-cta{display:none;}
+    .nav-toggle{display:flex;}
+    #siteNav{
+      position:absolute; top:100%; left:0; right:0; background:var(--surface);
+      box-shadow: 0 16px 32px rgba(8,12,26,0.14); max-height:0; overflow:hidden; transition: max-height .3s ease;
+    }
+    #siteNav.open{max-height:560px;}
+    #siteNav ul{display:flex; flex-direction:column; align-items:stretch; gap:0; padding:8px 0;}
+    #siteNav ul li > a{padding:14px 24px; text-align:left;}
+    #siteNav ul li > a::after{display:none;}
+    #siteNav ul li .submenu{position:static; box-shadow:none; display:block; max-height:0; overflow:hidden; padding:0; border:none; transition:max-height .25s ease;}
+    #siteNav ul li.submenu-open .submenu{max-height:400px; padding:4px 0;}
+    #siteNav ul li .submenu a{padding:9px 24px 9px 38px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="contact-info">
+      <span>✉ info@petrotek.ae</span>
+      <span>📍 Business Bay, Dubai, UAE</span>
+    </div>
+    <div class="contact-info">
+      <span>📞 +971 4 289 6166</span>
+    </div>
+  </div>
+  
+  <div class="header-logo-row">
+    <a href="#" class="logo"><img src="https://petrotek.ae/uploads/images/logo.webp" alt="Petrotek Logo"></a>
+    <div class="header-contact-btn">
+      <a href="tel:+97142896166" class="header-phone">📞 +971 4 289 6166</a>
+      <a href="#contact" class="btn btn-primary" style="padding:10px 22px; font-size:14px; border-radius: 30px;">Request Quote</a>
+    </div>
+  </div>
+
+  <div class="header-menu-row">
+    <div class="navwrap">
+      <nav id="siteNav">
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li class="has-submenu">
+            <a href="#brands">Lubricants &amp; Oils</a>
+            <div class="submenu">
+              <a href="#brands">Industrial Oils</a>
+              <a href="#brands">Automotive Oils</a>
+              <a href="#brands">Greases</a>
+              <a href="#brands">Food-Grade Lubricants</a>
+            </div>
+          </li>
+          <li class="has-submenu">
+            <a href="#brands">Equipment</a>
+            <div class="submenu">
+              <a href="#brands">Air Compressors</a>
+              <a href="#brands">Air Dryers</a>
+              <a href="#brands">Compressed Air Filtration</a>
+            </div>
+          </li>
+          <li><a href="#brands">Filtration</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://petrotek.ae/uploads/banners/file_7133_934_3134.webp" alt="Petrotek Industrial Lubricants and Equipment">
+  </div>
+  <div class="hero-inner">
+    <span class="eyebrow">Authorized Distributor in UAE &amp; GCC</span>
+    <h1>Industrial Lubricants,<br>Compressors &amp; <em>Equipment</em></h1>
+    <p>Premium industrial lubricants, CPI refrigeration oils, CompAir air compressors, and Donaldson filtration systems. Engineered for high performance and reliability.</p>
+    <div class="hero-btn-row">
+      <a href="#contact" class="btn btn-primary">Request A Quote</a>
+      <a href="#brands" class="btn btn-ghost">Explore Products</a>
+    </div>
+    <div class="hero-tags">
+      <span>Lubricants</span>
+      <span>Compressors</span>
+      <span>Air Filtration</span>
+      <span>Engineering Services</span>
+    </div>
+  </div>
+  <div class="scroll-cue"><span class="line"></span>Scroll</div>
+</section>
+
+<div class="marquee-section">
+  <div class="marquee-head"><span>Brands we represent across UAE &amp; GCC</span></div>
+  <div class="marquee-wrap">
+    <div class="marquee-track" style="gap: 80px;">
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;">COMPAIR</span>
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;">DONALDSON</span>
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;">CPI FLUIDS</span>
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;">EMKARATE</span>
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;">SOLEST</span>
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;">SHELL</span>
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;">MOBIL</span>
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;">TOTALENERGIES</span>
+      <!-- duplicated for a seamless loop -->
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;" aria-hidden="true">COMPAIR</span>
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;" aria-hidden="true">DONALDSON</span>
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;" aria-hidden="true">CPI FLUIDS</span>
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;" aria-hidden="true">EMKARATE</span>
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;" aria-hidden="true">SOLEST</span>
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;" aria-hidden="true">SHELL</span>
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;" aria-hidden="true">MOBIL</span>
+      <span style="font-family: var(--display); font-size: 24px; font-weight: 800; color: var(--text-muted); letter-spacing: 2px; opacity: 0.65;" aria-hidden="true">TOTALENERGIES</span>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="section-inner about-split reveal">
+    <div class="about-copy">
+      <span class="eyebrow">Who We Are</span>
+      <h2 style="text-transform:none; font-size:clamp(30px,3.6vw,44px); margin-top:14px;">Serving UAE's industrial lubrication and equipment needs</h2>
+      <p>Petrotek is a premier industrial distributor in the UAE, specializing in high-performance lubricants, oils, greases, air compressors, and downstream filtration systems. We partner with world-class manufacturers to keep your operations running smoothly with reliable engineering solutions and regional supply capabilities.</p>
+      <a href="#services" class="btn btn-dark">Our Services</a>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <span class="num">01</span>
+        <div><h3>Quality Supply</h3><p>Distributing certified lubricants, compressors, and air treatment systems that meet international industrial standards.</p></div>
+      </div>
+      <div class="pillar">
+        <span class="num">02</span>
+        <div><h3>Technical Support</h3><p>Providing technical consulting, custom lubrication audits, and professional maintenance support across the region.</p></div>
+      </div>
+      <div class="pillar">
+        <span class="num">03</span>
+        <div><h3>GCC Logistics</h3><p>Ensuring timely delivery and consistent inventory support with Jebel Ali warehousing and a dedicated logistics fleet.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-band">
+  <div class="stats-row reveal">
+    <div class="stat-item"><strong data-count="50" data-suffix="+">0</strong><span>Brands Represented</span></div>
+    <div class="stat-item"><strong data-count="1000" data-suffix="+">0</strong><span>Products Stocked</span></div>
+    <div class="stat-item"><strong data-count="500" data-suffix="+">0</strong><span>Happy Clients</span></div>
+  </div>
+</div>
+
+<section id="brands">
+  <div class="section-inner">
+    <div class="section-head center" style="margin-left:auto;margin-right:auto;">
+      <span class="eyebrow" style="justify-content:center;">Our Portfolio</span>
+      <h2>Represented Brands</h2>
+      <p style="margin-left:auto;margin-right:auto;">Authorized stockist and distributor of premium industrial lubricants, filtration, and equipment brands.</p>
+    </div>
+    <div class="brand-grid reveal">
+      <div class="brand-tile">CompAir</div>
+      <div class="brand-tile">Donaldson</div>
+      <div class="brand-tile">CPI Fluids</div>
+      <div class="brand-tile">Emkarate</div>
+      <div class="brand-tile">Solest</div>
+      <div class="brand-tile">Shell</div>
+      <div class="brand-tile">Mobil</div>
+      <div class="brand-tile">Total</div>
+      <div class="brand-tile">CPI Solest</div>
+      <div class="brand-tile">CPI Emkarate</div>
+    </div>
+  </div>
+</section>
+
+<div class="network-band" id="services">
+  <div class="section-inner" style="padding:76px 32px;">
+    <div class="section-head center" style="margin-left:auto;margin-right:auto;">
+      <span class="eyebrow" style="justify-content:center;">Technical Support</span>
+      <h2>Our Technical Services</h2>
+      <p style="margin-left:auto;margin-right:auto;">Supporting your industrial plants, compressors, and machinery audits across UAE and GCC.</p>
+    </div>
+    <div class="network-row reveal">
+      <div class="network-item"><strong data-count="10" data-suffix="+">0</strong><span>Audits / Week</span></div>
+      <div class="network-item"><strong data-count="24" data-suffix="/7">0</strong><span>Service Support</span></div>
+      <div class="network-item"><strong data-count="100" data-suffix="%">0</strong><span>Genuine Products</span></div>
+      <div class="network-item"><strong data-count="2">0</strong><span>Warehouses</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="news">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">Stay Connected</span>
+      <h2>News &amp; Events</h2>
+      <p>The latest updates, technical insights, and case studies from Petrotek.</p>
+    </div>
+    <div class="news-layout reveal">
+      <a href="#" class="news-featured">
+        <div class="news-img-wrap">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Industrial engineering">
+          <span class="news-date-badge">12 Aug 2026</span>
+        </div>
+        <div class="news-body">
+          <h4>CPI Solest Refrigeration Lubricants: Optimizing HVAC Chiller Performance</h4>
+          <p>Learn how the Solest range of synthetic polyol ester (POE) lubricants improves chiller efficiency, thermal stability, and compressor lifespan.</p>
+          <span class="news-link">READ THE WHITE PAPER →</span>
+        </div>
+      </a>
+      <div class="news-side">
+        <a href="#" class="news-side-card">
+          <div class="news-img-wrap">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Compressor pipeline">
+            <span class="news-date-badge">04 Jul 2026</span>
+          </div>
+          <div class="news-body">
+            <h4>Energy Efficiency Audits for CompAir Compressors in Dubai</h4>
+            <p>Our service team launches on-site compressed air audits, helping manufacturing facilities reduce power consumption by up to 25%.</p>
+            <span class="news-link">LEARN MORE →</span>
+          </div>
+        </a>
+        <a href="#" class="news-side-card">
+          <div class="news-img-wrap">
+            <img src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=800&q=80" alt="Downstream filtration">
+            <span class="news-date-badge">18 May 2026</span>
+          </div>
+          <div class="news-body">
+            <h4>Donaldson Gas Filtration Systems: Protecting Chemical Downstream Processes</h4>
+            <p>An analysis of Donaldson gas filtration technologies in filtering oil vapor and micro-particles from high-pressure systems.</p>
+            <span class="news-link">READ CASE STUDY →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="section-inner contact-split reveal">
+    <div>
+      <span class="eyebrow on-dark">Get In Touch</span>
+      <h2 style="text-transform:none; font-size:clamp(30px,3.6vw,44px); margin-top:14px;">Have a question about our lubricants, compressors, or services?</h2>
+      <p style="color:rgba(255,255,255,0.7); margin-top:14px; max-width:420px;">Send us your details and our engineering sales team will get back to you promptly.</p>
+      <ul class="contact-info-list">
+        <li><span class="ico">📞</span> +971 4 289 6166</li>
+        <li><span class="ico">✉</span> info@petrotek.ae</li>
+        <li><span class="ico">📍</span> Unit 3202, ETA Al Manara Tower, Business Bay, Dubai, UAE</li>
+      </ul>
+    </div>
+    <div class="contact-wrap">
+
+<!-- ===== Zoho Desk Support Web-to-Case Form ===== -->
+<style>
+  /* Default Zoho Desk Web-to-Case Styles (kept for compatibility) */
+  #zohoSupportWebToCase textarea, #zohoSupportWebToCase input[type='text'], #zohoSupportWebToCase input[type='date'], #zohoSupportWebToCase select, .wb_common { width: 280px; }
+  #zohoSupportWebToCase td { padding: 11px 5px; }
+  #zohoSupportWebToCase textarea, #zohoSupportWebToCase input[type='text'], #zohoSupportWebToCase input[type='date'], #zohoSupportWebToCase select { border: 1px solid #ddd; padding: 3px 5px; border-radius: 3px; }
+  #zohoSupportWebToCase select { box-sizing: unset }
+  #zohoSupportWebToCase .wb_selectDate { width: auto }
+  #zohoSupportWebToCase input.wb_cusInput { width: 108px }
+  .wb_FtCon { display: flex; align-items: center; justify-content: flex-end; margin-top: 15px; padding-left: 10px }
+  .wb_logoCon { display: flex; margin-left: 5px }
+  .wb_logo { max-width: 16px; max-height: 16px; }
+  #zohoSupportWebToCase .wb_multi_pick { border: 1px solid #ddd; padding: 3px 5px; border-radius: 3px; width: 280px; height: 95px; overflow-y: auto; }
+  #zohoSupportWebToCase .wb_multi_pick_label { display: block; }
+  #zohoSupportWebToCase .wb_multi_pick_input, .wb_multi_pick_input_all { vertical-align: middle; margin-right: 5px; }
+  .zsFormClass { background-color: #FFFFFF; width: 600px }
+  .zsFontClass { color: #000000; font-family: Arial; font-size: 13px }
+  .manfieldbdr { border-left: 1px solid #ff6448!important }
+  .hleft { text-align: left; }
+  input[type=file]::-webkit-file-upload-button { cursor: pointer; }
+  .wtcsepcode { margin: 0px 15px; color: #aaa; float: left; }
+  .wtccloudattach { float: left; color: #00a3fe!important; cursor: pointer; text-decoration: none!important; }
+  .wtccloudattach:hover { text-decoration: none!important; }
+  .wtcuploadinput { cursor: pointer; float: left; width: 62px; margin-top: -20px; opacity: 0; clear: both; }
+  .wtcuploadfile { float: left; color: #00a3fe; }
+  .filenamecls { margin-right: 15px; float: left; margin-top: 5px; }
+  .clboth { clear: both; }
+  #zsFileBrowseAttachments { clear: both; margin: 5px 0px 10px; }
+  .zsFontClass { vertical-align: top; }
+  #tooltip-zc { font: normal 12px Arial, Helvetica, sans-serif; line-height: 18px; position: absolute; padding: 8px; margin: 20px 0 0; background: #fff; border: 1px solid #528dd1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; color: #eee; -webkit-box-shadow: 5px 5px 20px rgba(0,0,0,0.2); -moz-box-shadow: 5px 5px 20px rgba(0,0,0,0.2); z-index: 10000; color: #777 }
+  .wtcmanfield { color: #f00; font-size: 16px; position: relative; top: 2px; left: 1px; }
+  #zsCloudAttachmentIframe { width: 100%; height: 100%; z-index: 99999!important; position: fixed; left: 0px; top: 0px; border-style: none; display: none; background-color: #fff; }
+  .wtchelpinfo { background-position: -246px -485px; width: 15px; height: 15px; display: inline-block; position: relative; top: 2px; background-image: url(https://static.zohocdn.com/zohodeskstatic/app/images/zs-mpro.b6c9cf2347c62390fdcb.png); }
+  .zsMaxSizeMessage { font-size: 13px; }
+</style>
+
+<script src='https://static.zohocdn.com/zohodeskstatic/app/js/jqueryandencoder.ef05974972bf3bca1b87.js'></script>
+
+<div id='zohoSupportWebToCase' align='center'>
+  <form name='zsWebToCase_1430916000000467093' id='zsWebToCase_1430916000000467093' action='https://desk.zoho.com/support/WebToCase' method='POST' onSubmit='return zsValidateMandatoryFields()' enctype='multipart/form-data'>
+    <input type='hidden' name='xnQsjsdp' value='edbsn10838478a77c2a8ccdd6fb1e2276df6a'/>
+    <input type='hidden' name='xmIwtLD' value='edbsn23ba3f7ccab6cfd2203744b0f795ef7275a060d74ffebc16de36c783c27f8fb1'/>
+    <input type='hidden' name='xJdfEaS' value=''/>
+    <input type='hidden' name='actionType' value='Q2FzZXM='/>
+    <input type="hidden" id="property(module)" value="Cases"/>
+    <input type="hidden" id="dependent_field_values_Cases" value="{&#34;JSON_VALUES&#34;:{},&#34;JSON_SELECT_VALUES&#34;:{},&#34;JSON_MAP_DEP_LABELS&#34;:[]}"/>
+    <input type='hidden' name='returnURL' value='https://webforms.onrender.com'/>
+    
+    <table border='0' cellspacing='0' class='zsFormClass'>
+      <tr>
+        <td colspan='2' class='zsFontClass'><strong>Web Form</strong></td>
+      </tr>
+      <tr>
+        <td nowrap class='zsFontClass' width='25%' align='left'>Name&nbsp;&nbsp;</td>
+        <td align='left' width='75%'><input type='text' maxlength='120' name='Contact Name' class='manfieldbdr'/></td>
+      </tr>
+      <tr>
+        <td nowrap class='zsFontClass' width='25%' align='left'>Email&nbsp;&nbsp;</td>
+        <td align='left' width='75%'><input type='text' maxlength='120' name='Email' value='' class='manfieldbdr'/></td>
+      </tr>
+      <tr>
+        <td nowrap class='zsFontClass' width='25%' align='left'>Phone&nbsp;&nbsp;</td>
+        <td align='left' width='75%'><input type='text' maxlength='120' name='Phone' value='' /></td>
+      </tr>
+      <tr>
+        <td nowrap class='zsFontClass' width='25%' align='left'>Division &nbsp;&nbsp;</td>
+        <td align='left' width='75%'>
+          <select name='Division' value='' onchange="setDependent(this, false)" id='CASECF161'>
+            <option value=''>-None-</option>
+            <option value='Lubricants Division'>Lubricants Division</option>
+            <option value='Air Division'>Air Division</option>
+            <option value='CNC Division'>CNC Division</option>
+            <option value='Measuring Devices'>Measuring Devices</option>
+            <option value='Pumps Division'>Pumps Division</option>
+            <option value='Vacuum Cleaner'>Vacuum Cleaner</option>
+            <option value='Industrial Chain'>Industrial Chain</option>
+            <option value='Quick Disconnect Couplings'>Quick Disconnect Couplings</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td nowrap class='zsFontClass' width='25%' align='left'>Subject&nbsp;&nbsp;</td>
+        <td align='left' width='75%'><input type='text' maxlength='255' name='Subject' value='' class='manfieldbdr'/></td>
+      </tr>
+      <tr>
+        <td nowrap class='zsFontClass' width='25%' align='left'>Description &nbsp;&nbsp;</td>
+        <td align='left' width='75%'><textarea name='Description' maxlength='3000'></textarea></td>
+      </tr>
+      <tr>
+        <td style='padding: 11px 5px 0px 5px;' colspan='2' align='center' width='25%'>
+          <input type='submit' id="zsSubmitButton_1430916000000467093" class='zsFontClass' value='Submit'>
+          &nbsp; &nbsp;
+          <input type='button' class='zsFontClass' value='Reset' onclick="zsResetWebForm('1430916000000467093')">
+        </td>
+      </tr>
+      <tr>
+        <td width='25%' align='left'></td>
+        <td style='padding: 0px 5px;' align='left' width='75%'>
+          <div class='wb_FtCon wb_common'>
+            <span>powered by  </span>
+            <a target='_blank' rel='noopener noreferrer' href='https://zoho.com/desk' class='wb_logoCon'>
+              <img class='wb_logo' src='https://static.zohocdn.com/zohodeskstatic/app/images/portalLogo.de847024ebc0131731a3.png' />
+            </a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<script>
+window.addEventListener('pageshow', function () {
+  const submitButton = document.getElementById('zsSubmitButton_1430916000000467093');
+  if (submitButton) {
+    submitButton.removeAttribute('disabled');
+  }
+  const captchaTextField = document.forms['zsWebToCase_1430916000000467093']['zsWebFormCaptchaWord'];
+  if(window.zsRegenerateCaptcha && captchaTextField.value) {
+    captchaTextField.value = '';
+    captchaTextField.focus();
+    zsRegenerateCaptcha();
+  }
+});
+function trimBoth(str){return jQuery.trim(str);}
+function setAllDependancyFieldsMapping(){
+  var mapDependancyLabels = getMapDependenySelectValues(jQuery("[id='property(module)']").val(), "JSON_MAP_DEP_LABELS");
+  if(mapDependancyLabels){
+    for(var i = 0; i < mapDependancyLabels.length; i++){
+      var label = mapDependancyLabels[i];
+      var obj = document.forms['zsWebToCase_1430916000000467093'][label];
+      if(obj){setDependent(obj, true);}
+    }
+  }
+}
+function getMapDependenySelectValues(module, key){
+  var dependencyObj = jQuery.parseJSON( jQuery("[id='dependent_field_values_" + module + "']").val() );
+  if(dependencyObj == undefined){return dependencyObj;}
+  return dependencyObj[key];
+}
+function setDependent(obj, isload){
+  var name = obj.id || (obj[0] && obj[0].id) || "";
+  var module = jQuery("[id='property(module)']").val();
+  var val = "";
+  var myObject = getMapDependenySelectValues(module, "JSON_VALUES");
+  if(myObject !=undefined){val = myObject[name];}
+  var mySelObject = getMapDependenySelectValues(module, "JSON_SELECT_VALUES");
+  if(val != null && val != "" && val != "null" && mySelObject){
+    var fields = val;
+    for(var i in fields){
+      if (fields.hasOwnProperty(i)){
+        var isDependent = false;
+        var label = i;
+        var values = fields[i];
+        if(label.indexOf(")") > -1){label = label.replace(/\)/g, '_____');}
+        if(label.indexOf("(") > -1){label = label.replace(/\(/g, '____');}
+        if(label.indexOf(".") > -1){label = label.replace(/\./g, '___');}
+        var depObj = document.forms['zsWebToCase_1430916000000467093'][label];
+        if(depObj && depObj.options){
+          var mapValues = "";
+          var selected_val = depObj.value;
+          var depLen = depObj.options.length-1;
+          for (var n = depLen; n >= 0; n--) {
+            if (depObj.options[n].selected){
+              if(mapValues == ""){mapValues = depObj.options[n].value;}
+              else{mapValues = mapValues + ";;;"+depObj.options[n].value;}
+            }
+          }
+          depObj.value = "";
+          var selectValues = mySelObject[label];
+          for(var k in values){
+            var rat = k;
+            if(rat == "-None-"){rat = "";}
+            var parentValues = mySelObject[name];
+            if(rat == trimBoth(obj.value)){
+              isDependent = true;
+              depObj.length = 0;
+              var depvalues = values[k];
+              var depLen = depvalues.length - 1;
+              for(var j = 0; j <= depLen; j++){
+                var optionElement = document.createElement("OPTION");
+                var displayValue = depvalues[j];
+                var actualValue = displayValue;
+                if(actualValue == "-None-"){optionElement.value = "";displayValue = "-None-";}
+                else{optionElement.value = actualValue;}
+                optionElement.text = displayValue;
+                if(mapValues != undefined){
+                  var mapValue = mapValues.split(";;;");
+                  var len = mapValue.length;
+                  for(var p = 0; p < len; p++){
+                    if(actualValue == mapValue[p]){optionElement.selected = true;}
+                  }
+                }
+                depObj.options.add(optionElement);
+              }
+            }
+          }
+          if(!isDependent){
+            depObj.length = 0;
+            var len = selectValues.length;
+            for(var j = 0; j < len; j++){
+              var actualValue = selectValues[j];
+              var optionElement = document.createElement("OPTION");
+              if(actualValue == "-None-"){optionElement.value = "";}
+              else{optionElement.value = selectValues[j];}
+              optionElement.text = selectValues[j];
+              depObj.options.add(optionElement);
+            }
+            depObj.value =  selected_val;
+          }
+          if(!isload){setDependent(depObj,false);}
+          var jdepObj = jQuery(depObj);
+          if(jdepObj.hasClass('select2-offscreen')){jdepObj.select2("val", jdepObj.val());}
+        }
+      }
+    }
+  }
+}
+function setSelectAll(id){
+  var parentElement = document.getElementById(id);
+  var hiddenInput = parentElement.querySelector('#hiddenoptions');
+  var selectAllElement = parentElement.querySelector('#selectall' + id);
+  var selectedValues = [];
+  var checkboxes = parentElement.querySelectorAll('.wb_multi_pick_input');
+  checkboxes.forEach(function (cb) {
+    cb.checked = selectAllElement.checked;
+    if (cb.checked && cb.value) {selectedValues.push(cb.value);}
+  });
+  hiddenInput.value = selectedValues.join(',');
+}
+function setMultiSelectOption(id, obj){
+  var parentElement = document.getElementById(id);
+  var hiddenInput = parentElement.querySelector('#hiddenoptions');
+  var selectAllElement = parentElement.querySelector('#selectall' + id);
+  var selectedStr = hiddenInput.value;
+  var selectedValues = selectedStr ? selectedStr.split(',') : [];
+  if(obj.checked && obj.value) {selectedValues.push(obj.value);}
+  else if(!obj.checked && obj.value) {
+    selectedValues.splice(selectedValues.indexOf(obj.value), 1);
+    selectAllElement.checked = false;
+  }
+  else {selectAllElement.checked = false;}
+  hiddenInput.value = selectedValues.join(',');
+}
+var zctt = function(){
+  var tt, mw = 400, top = 10, left = 0, doctt = document;
+  var ieb = doctt.all ? true : false;
+  return{
+    showtt: function(cont, wid){
+      if(tt == null){
+        tt = doctt.createElement('div');
+        tt.setAttribute('id', 'tooltip-zc');
+        doctt.body.appendChild(tt);
+        doctt.onmousemove = this.setpos;
+        doctt.onclick = this.hidett;
+      }
+      tt.style.display = 'block';
+      tt.innerHTML = cont;
+      tt.style.width = wid ? wid + 'px' : 'auto';
+      if(!wid && ieb){tt.style.width = tt.offsetWidth;}
+      if(tt.offsetWidth > mw){tt.style.width = mw + 'px'}
+      h = parseInt(tt.offsetHeight) + top;
+      w = parseInt(tt.offsetWidth) + left;
+    },
+    hidett: function(){tt.style.display = 'none';},
+    setpos: function(e){
+      var u = ieb ? event.clientY + doctt.body.scrollTop : e.pageY;
+      var l = ieb ? event.clientX + doctt.body.scrollLeft : e.pageX;
+      var cw = doctt.body.clientWidth;
+      var ch = doctt.body.clientHeight;
+      if(l < 0){tt.style.left = left + 'px';tt.style.right = '';}
+      else if((l+w+left) > cw){tt.style.left = '';tt.style.right = ((cw-l) + left) + 'px';}
+      else{tt.style.right = '';tt.style.left = (l + left) + 'px';}
+      if(u < 0){tt.style.top = top + 'px';tt.style.bottom = '';}
+      else if((u + h + left) > ch){tt.style.top = '';tt.style.bottom = ((ch - u) + top) + 'px';}
+      else{tt.style.bottom = '';tt.style.top = (u + top) + 'px';}
+    }
+  };
+}();
+var zsWebFormMandatoryFields = new Array("Contact Name","Email","Subject");
+var zsFieldsDisplayLabelArray = new Array("Name","Email","Subject");
+function reformatAllDateFields() {
+  const dateFields = document.querySelectorAll('.dob-field');
+  dateFields.forEach(field => {
+    if (field.value && field.value.includes('-')) {
+      const parts = field.value.split('-');
+      if (parts.length === 3) {
+        const [yyyy, mm, dd] = parts;
+        field.type= 'text';
+        field.value = `${dd}/${mm}/${yyyy}`;
+      }
+    }
+  });
+}
+function zsValidateMandatoryFields(){
+  var name = '';
+  var email = '';
+  var isError = 0;
+  for(var index = 0; index < zsWebFormMandatoryFields.length; index++){
+    isError = 0;
+    var fieldObject = document.forms['zsWebToCase_1430916000000467093'][zsWebFormMandatoryFields[index]];
+    if(fieldObject){
+      if(((fieldObject.value).replace(/^\s+|\s+$/g, '')).length == 0){
+        alert(zsFieldsDisplayLabelArray[index] +' cannot be empty ');
+        fieldObject.focus();
+        isError = 1;
+        return false;
+      }
+      else{
+        if(fieldObject.name == 'Email'){
+          if(!fieldObject.value.match(/^([\w_][\w\-_.+\'&]*)@(?=.{4,256}$)(([\w]+)([\-_]*[\w])*[\.])+[a-zA-Z]{2,22}$/)){
+            isError = 1;
+            alert('Enter a valid email-Id');
+            fieldObject.focus();
+            return false;
+          }
+        }
+      }
+      if(fieldObject.nodeName == 'SELECT'){
+        if(fieldObject.options[fieldObject.selectedIndex].value == '-None-'){
+          alert(zsFieldsDisplayLabelArray[index] +' cannot be none');
+          fieldObject.focus();
+          isError = 1;
+          return false;
+        }
+      }
+      if(fieldObject.type == 'checkbox'){
+        if (fieldObject.checked == false){
+          alert('Please accept '+zsFieldsDisplayLabelArray[index]);
+          fieldObject.focus();
+          isError = 1;
+          return false;
+        }
+      }
+    }
+  }
+  if(isError == 0){
+    reformatAllDateFields();
+    document.getElementById('zsSubmitButton_1430916000000467093').setAttribute('disabled', 'disabled');
+  }
+}
+document.addEventListener('readystatechange',function(){
+  if(document.readyState === 'complete' && window.zsRegenerateCaptcha ){
+    zsRegenerateCaptcha();
+  }
+  setAllDependancyFieldsMapping();
+  document.getElementById('zsSubmitButton_1430916000000467093').removeAttribute('disabled');
+});
+function zsResetWebForm(webFormId){
+  document.forms['zsWebToCase_'+webFormId].reset();
+  document.getElementById('zsSubmitButton_1430916000000467093').removeAttribute('disabled');
+  setAllDependancyFieldsMapping();
+}
+</script>
+<!-- ===== End Zoho Desk Support Web-to-Case Form ===== -->
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">PETROTEK</div>
+      <p style="font-size:13px; max-width:260px;">Leading industrial lubricants, refrigeration fluids, grease, air compressors, and filtration suppliers in the UAE.</p>
+    </div>
+    <div>
+      <h4>About Us</h4>
+      <ul>
+        <li><a href="#about">Company Profile</a></li>
+        <li><a href="#about">Core Values</a></li>
+        <li><a href="#services">Services</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="#brands">Industrial Oils</a></li>
+        <li><a href="#brands">Refrigeration Lubricants</a></li>
+        <li><a href="#brands">Air Compressors</a></li>
+        <li><a href="#brands">Donaldson Filtration</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Brands</h4>
+      <ul>
+        <li><a href="#brands">CompAir</a></li>
+        <li><a href="#brands">CPI Fluid Engineering</a></li>
+        <li><a href="#brands">Emkarate</a></li>
+        <li><a href="#brands">Solest</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>+971 4 289 6166</li>
+        <li>info@petrotek.ae</li>
+        <li>Unit 3202, ETA Al Manara Tower, Business Bay, Dubai, UAE</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>©2026 PETROTEK L.L.C. — All Rights Reserved</span>
+    <span>Industrial Lubricants &amp; Equipment Distribution Hub</span>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script>
+(function(){
+  // ---- Header shrink-on-scroll + back-to-top visibility ----
+  var header = document.querySelector('header');
+  var backToTop = document.getElementById('backToTop');
+  function onScroll(){
+    var y = window.scrollY || document.documentElement.scrollTop;
+    header.classList.toggle('scrolled', y > 40);
+    backToTop.classList.toggle('visible', y > 500);
+  }
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  backToTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // ---- Mobile nav toggle ----
+  var navToggle = document.getElementById('navToggle');
+  var siteNav = document.getElementById('siteNav');
+  navToggle.addEventListener('click', function(){
+    var isOpen = siteNav.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  var submenuParent = document.querySelector('#siteNav li.has-submenu');
+  if (submenuParent){
+    submenuParent.querySelector('a').addEventListener('click', function(e){
+      if (window.innerWidth <= 1000){
+        e.preventDefault();
+        submenuParent.classList.toggle('submenu-open');
+      }
+    });
+  }
+  siteNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      if (window.innerWidth <= 1000 && a.closest('.submenu') === null){
+        siteNav.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // ---- Scroll-reveal ----
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  // ---- Animated counters ----
+  var counters = document.querySelectorAll('[data-count]');
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+    var suffix = el.getAttribute('data-suffix') || '';
+    var duration = 1100;
+    var start = null;
+    function step(ts){
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if ('IntersectionObserver' in window && counters.length){
+    var counterIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          animateCount(entry.target);
+          counterIo.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.6});
+    counters.forEach(function(el){ counterIo.observe(el); });
+  } else {
+    counters.forEach(function(el){
+      el.textContent = el.getAttribute('data-count') + (el.getAttribute('data-suffix') || '');
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
